@@ -1,0 +1,49 @@
+//Variales de tamaños 
+
+$fuente: 30px;
+
+
+//Variable de color 
+
+$color: #00214d;
+
+$color-mixin: #00ebc7;
+
+
+//VARIABLES de colores con MAP
+
+$colores-head:(
+    fondo: #fffffe,
+    nav-ul-li--hover: red,
+    dropdown: black,
+    content--hover: #f9f9f9,
+    box--shadow: rgba(0,0,0,0.2),
+    dropdown--hover: #f1f1f1,
+
+);
+
+
+$colores-main:(
+    //Carousel
+    carousel-fondo: white,
+
+    //Eventos
+    eventos-fondo: linear-gradient(to right, #00ebc7 0%, rgba(246,247,146,0.9) 80%),
+    fondo--mobile: #00ebc7,
+
+    desafio-fondo: #77c4d3,
+    desafio-h1: #EFF8FF,
+
+    inscripciones-p--fondo: crimson,
+    informacion-fondo: rgba(246,247,146,0.9),
+
+    recorrido-fondo: rgba(234,46,73,0.9),
+
+    informacion2-fondo: rgba(255,255,255,0.9),
+
+    //Noticias
+    noticias-fondo: #ff5470,
+    color: #fff,
+
+);
+
