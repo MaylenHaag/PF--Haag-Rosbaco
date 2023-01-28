@@ -7,14 +7,15 @@ $fuente: 30px;
 
 $color: #00214d;
 
-$color-mixin: #00ebc7;
+$rojito: #CC0000;
+
+$color-mixin: #7DC24B;
 
 
 //VARIABLES de colores con MAP
 
 $colores-head:(
     fondo: #fffffe,
-    nav-ul-li--hover: red,
     dropdown: black,
     content--hover: #f9f9f9,
     box--shadow: rgba(0,0,0,0.2),
@@ -28,22 +29,23 @@ $colores-main:(
     carousel-fondo: white,
 
     //Eventos
-    eventos-fondo: linear-gradient(to right, #00ebc7 0%, rgba(246,247,146,0.9) 80%),
-    fondo--mobile: #00ebc7,
+    eventos-fondo: linear-gradient(to right, #CC0000 0%, #FFCC00 90%),
+    fondo--mobile: #7DC24B,
 
-    desafio-fondo: #77c4d3,
+    desafio-fondo: #41AAC4,
     desafio-h1: #EFF8FF,
 
-    inscripciones-p--fondo: crimson,
     informacion-fondo: rgba(246,247,146,0.9),
 
-    recorrido-fondo: rgba(234,46,73,0.9),
+    informacion2-fondo:  #80d600,
 
-    informacion2-fondo: rgba(255,255,255,0.9),
+    galeria-fondo: rgba(255,255,255,0.9),
 
     //Noticias
-    noticias-fondo: #ff5470,
+    noticias-fondo: crimson,
+    medio: rgba(255,255,255,0.9),
     color: #fff,
+
 
 );
 

@@ -104,7 +104,7 @@
 
 
     nav ul li a:hover{
-        color: map-get(c.$colores-head,"nav-ul-li--hover");
+        color: c.$rojito;
     
     }
      
@@ -128,7 +128,7 @@
 
 
             &:hover{
-                color: map-get(c.$colores-head,"nav-ul-li--hover");
+                color: c.$rojito;
             
             }
         }
@@ -159,7 +159,7 @@
     
                 &:hover {
                     background-color: map-get(c.$colores-head,"dropdown--hover");
-                    color: map-get(c.$colores-head,"nav-ul-li--hover");
+                    color: c.$rojito;
     
                 }
             }
@@ -206,8 +206,8 @@
     
 
         &:hover{
-            background-color: map-get(c.$colores-main,"inscripciones-p--fondo");
-            border-color: map-get(c.$colores-main,"inscripciones-p--fondo");
+            background-color: c.$rojito;
+            border-color: c.$rojito;
             color: map-get(c.$colores-main,"carousel-fondo");
             
         
@@ -224,7 +224,7 @@
 
 
 .eventos{
-    background-color: map-get(c.$colores-main,"fondo--mobile");
+    background-color: c.$rojito;
     display: grid;
     grid-template-columns: 5% 90% 5%;
     grid-template-rows: 550px  700px 850px  540px  680px  800px;
@@ -299,7 +299,7 @@
                 margin-top: 10%;
                 margin-left: 30%;
                 margin-right: 30%;
-                background-color: map-get(c.$colores-main,"inscripciones-p--fondo");
+                background-color: c.$rojito;
                 border-radius: 20px;
                 padding: 5px;
                 color: map-get(c.$colores-main,"desafio-h1");
@@ -347,7 +347,7 @@
         height: 100%;
         margin-bottom: 0;
         grid-area: recorrido;
-        background-color: map-get(c.$colores-main,"recorrido-fondo");
+        background-color: map-get(c.$colores-main, "galeria-fondo" );
 
     
         h2{
@@ -400,7 +400,7 @@
 
 
     #eventos__galeria{
-        background-color: map-get(c.$colores-main,"informacion2-fondo");
+        background-color: map-get(c.$colores-main,"galeria-fondo");
         grid-area: galeria;
         height: 90%;
         margin-bottom: 10px;
@@ -509,6 +509,9 @@
 
 
         #eventos__recorrido{
+            background-color: c.$rojito;
+
+
             img{
                 height: 82%;
         
@@ -550,6 +553,7 @@
 
     .titulo{
         font-size: 15px;
+        color: map-get(c.$colores-main, "color" );
     }
 
 
@@ -615,7 +619,7 @@
 
 
 //MIXINS
-@mixin noticia-medio ($color-mixin: #00ebc7){
+@mixin noticia-medio ($color-mixin: #7DC24B){
     background-color: $color-mixin;
  
 }
@@ -664,6 +668,7 @@
 
         .titulo{
             font-size: 30px;
+            color: c.$color;
 
         }
     
@@ -678,13 +683,14 @@
     
         .a{
             font-size: calc(c.$fuente/2);
+            color: c.$color;
 
         }
         
     
         .noticia__div2:hover,
         .noticia__div5:hover{
-            @include noticia-medio($color-mixin: map-get(c.$colores-main,"informacion2-fondo"));
+            @include noticia-medio($color-mixin: map-get(c.$colores-main,"medio"));
 
         }
     }
@@ -717,7 +723,7 @@
 
 
         span{
-            color: map-get(c.$colores-main,"noticias-fondo");
+            color: c.$rojito;
             font-family:fantasy;
         
         }
@@ -782,6 +788,11 @@
             }
         }
     }
+}
+
+
+.tabla{
+    background-color: map-get(c.$colores-main, "fondo--mobile" );
 }
 
 

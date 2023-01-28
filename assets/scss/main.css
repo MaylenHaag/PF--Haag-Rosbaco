@@ -79,7 +79,7 @@
   display: list-item;
 }
 .header nav ul li a:hover {
-  color: red;
+  color: #CC0000;
 }
 .header .dropdown {
   position: relative;
@@ -98,7 +98,7 @@
   cursor: pointer;
 }
 .header .dropdown .dropbtn:hover {
-  color: red;
+  color: #CC0000;
 }
 .header .dropdown:hover .dropdown-content {
   display: block;
@@ -120,7 +120,7 @@
 }
 .header .dropdown .dropdown-content .a:hover {
   background-color: #f1f1f1;
-  color: red;
+  color: #CC0000;
 }
 @media screen and (min-width: 1024px) {
   .header #logo {
@@ -151,8 +151,8 @@
   padding: 10px 20px 10px 20px;
 }
 .carrusel a:hover {
-  background-color: crimson;
-  border-color: crimson;
+  background-color: #CC0000;
+  border-color: #CC0000;
   color: white;
 }
 .carrusel p {
@@ -161,14 +161,14 @@
 }
 
 .eventos {
-  background-color: #00ebc7;
+  background-color: #CC0000;
   display: grid;
   grid-template-columns: 5% 90% 5%;
   grid-template-rows: 550px 700px 850px 540px 680px 800px;
   grid-template-areas: ". desafio ." ". inscripciones ." ". info ." ". recorrido ." ". info2 ." ". galeria .";
 }
 .eventos #eventos__desafio {
-  background-color: #77c4d3;
+  background-color: #41AAC4;
   display: block;
   grid-area: desafio;
   height: 100%;
@@ -211,7 +211,7 @@
   margin-top: 10%;
   margin-left: 30%;
   margin-right: 30%;
-  background-color: crimson;
+  background-color: #CC0000;
   border-radius: 20px;
   padding: 5px;
   color: #EFF8FF;
@@ -242,7 +242,7 @@
   height: 100%;
   margin-bottom: 0;
   grid-area: recorrido;
-  background-color: rgba(234, 46, 73, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 .eventos #eventos__recorrido h2 {
   text-align: center;
@@ -259,7 +259,7 @@
 .eventos #eventos__informacion2 {
   text-align: center;
   grid-area: info2;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #80d600;
   margin-top: 0;
 }
 .eventos #eventos__informacion2 h3 {
@@ -297,7 +297,7 @@
 
 @media screen and (min-width: 1024px) {
   .eventos {
-    background: linear-gradient(to right, #00ebc7 0%, rgba(246, 247, 146, 0.9) 80%);
+    background: linear-gradient(to right, #CC0000 0%, #FFCC00 90%);
     display: grid;
     grid-template-columns: 2fr 1fr 7fr 4fr 3fr 2fr 6fr 1fr 2fr;
     grid-template-rows: 15px 70px 790px 11fr 2fr 10fr 2fr;
@@ -339,6 +339,9 @@
     margin-left: 60px;
     width: 30px;
   }
+  .eventos #eventos__recorrido {
+    background-color: #CC0000;
+  }
   .eventos #eventos__recorrido img {
     height: 82%;
   }
@@ -360,11 +363,12 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
-  background-color: #ff5470;
+  background-color: crimson;
   font-family: "Quicksand", sans-serif;
 }
 #noticias .titulo {
   font-size: 15px;
+  color: #fff;
 }
 #noticias p,
 #noticias a {
@@ -393,7 +397,7 @@
 #noticias .noticia__div6 {
   margin-left: 10px;
   margin-right: 10px;
-  background-color: #00ebc7;
+  background-color: #7DC24B;
   color: #00214d;
   border-radius: 10px;
   padding: 20px;
@@ -420,7 +424,7 @@
 #noticias .noticia__div4,
 #noticias .noticia__div5,
 #noticias .noticia__div6 {
-    background-color: #ff5470;
+    background-color: crimson;
     color: #fff;
     width: 28%;
     height: 960px;
@@ -432,7 +436,7 @@
 #noticias .noticia__div4:hover,
 #noticias .noticia__div5:hover,
 #noticias .noticia__div6:hover {
-    background-color: #00ebc7;
+    background-color: #7DC24B;
     color: #00214d;
     border-radius: 10px;
     transform: scale(1);
@@ -440,6 +444,7 @@
   }
   #noticias .titulo {
     font-size: 30px;
+    color: #00214d;
   }
   #noticias p {
     font-size: 15px;
@@ -448,6 +453,7 @@
   }
   #noticias .a {
     font-size: 15px;
+    color: #00214d;
   }
   #noticias .noticia__div2:hover,
 #noticias .noticia__div5:hover {
@@ -470,7 +476,7 @@
   width-margin-top: 80px;
 }
 #sobrenosotros .sobrenosotros--info span {
-  color: #ff5470;
+  color: #CC0000;
   font-family: fantasy;
 }
 #sobrenosotros .sobrenosotros--info p {
@@ -512,6 +518,10 @@
     margin-top: 44px;
   }
 }
+.tabla {
+  background-color: #7DC24B;
+}
+
 /* -----------FOOTER--------- */
 #footer {
   font-size: 15px;
