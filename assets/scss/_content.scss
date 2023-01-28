@@ -12,7 +12,6 @@
 
 /* -----------HEAD--------- */
 
-
 .header{
     background-color: map-get(c.$colores-head,"fondo");
     color: c.$color;
@@ -22,71 +21,38 @@
     margin-left: 15px;
     margin-right: 15px;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     width: auto;
     z-index: 2;
     display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 
 
     #logo{
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 25px;
-        width: auto;
         display: flex;
-        align-items: center;
-        align-content: center;
-
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: stretch;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: calc(c.$fuente / 2);
+        width: auto;
 
         img{
-            width: 60px;
+            width: 40px;
             height: auto;
             margin-top: 5%;
-            position: relative;
-            animation: muevete 5s infinite;
-    
-        }
-    }
-
-
-    @keyframes muevete{
-        0%{left:10%;}
-        100%{left:1050%;}
-    
-    }
-
-
-    @media screen and (max-width: 480px){
-        #logo {
-            display: flex;
-            flex-direction: column-reverse;
-            flex-wrap: nowrap;
-            justify-content: flex-start;
-            align-items: flex-start;
-            align-content: stretch;
-    
-    
-            img{
-                width: 60px;
-                height: auto;
-                margin-top: 5%;
-                position:initial;
-        
-            }
-        }
-        
-    
-        .header__nav{
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-size: calc(c.$fuente / 2); 
+            margin-left: 10px;
+            position:initial;
     
         }
     }
@@ -94,9 +60,9 @@
 
     .header__nav{
         font-family:Verdana, Geneva, Tahoma, sans-serif;
-        font-size: calc(c.$fuente / 2); 
         padding-right: 0;
         padding-left: 10px;
+        font-size: 10px; 
 
     }
 
@@ -111,31 +77,29 @@
 
     .header__ul{
         list-style: none;
-        display: flex;
+        display: inline-block;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
         align-content: center;
 
-
-        li{
-            display: inline-block;
-            padding-left: 15px;
-            padding-right: 0;
-            align-items: center;
-            align-content: center;
-        
-        }
-
     }
 
 
-    @media screen and (max-width: 480px){
-        nav ul li{
-            display:list-item;
-        
-        }
+    li{
+        display: inline-block;
+        padding-left: 15px;
+        padding-right: 0;
+        align-items: center;
+        align-content: center;
+    
+    }
+
+
+    nav ul li{
+        display:list-item;
+    
     }
 
 
@@ -158,7 +122,7 @@
             color: c.$color;
             background-color: map-get(c.$colores-head,"fondo");
             font-family:Verdana, Geneva, Tahoma, sans-serif;
-            font-size: calc(c.$fuente / 2);
+            margin-left: -17px;
             border: none;
             cursor: pointer;
 
@@ -201,6 +165,31 @@
             }
         }
     }
+
+
+    @media screen and (min-width: 1024px){
+        #logo {
+            align-items: center;
+            align-content: center;
+            font-size: 20px;
+    
+            img{
+                position: relative;
+                width: 60px;
+                margin-left: 0;
+
+            }
+        }
+
+        .header__nav{
+            font-size: calc(c.$fuente/2);
+    
+        }
+
+        .header__ul{
+            display: flex;
+        }    
+    }
 }
 
 
@@ -217,8 +206,8 @@
     
 
         &:hover{
-            background-color: transparent;
-            border-color: map-get(c.$colores-main,"carousel-fondo");
+            background-color: map-get(c.$colores-main,"inscripciones-p--fondo");
+            border-color: map-get(c.$colores-main,"inscripciones-p--fondo");
             color: map-get(c.$colores-main,"carousel-fondo");
             
         
@@ -235,19 +224,18 @@
 
 
 .eventos{
-    background: map-get(c.$colores-main,"eventos-fondo");
+    background-color: map-get(c.$colores-main,"fondo--mobile");
     display: grid;
-    grid-template-columns: 2fr 1fr 7fr 4fr 3fr 2fr 6fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 11fr 11fr 2fr 10fr 1fr;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 550px  700px 850px  540px  680px  800px;
     grid-template-areas: 
         
-    ". . . . . . . . ."
-    ". desafio desafio desafio desafio . . . ."
-    ". desafio desafio desafio desafio inscripciones inscripciones inscripciones ."
-    ". info info info recorrido recorrido recorrido . ."
-    ". . . galeria galeria galeria galeria . ."
-    ". . info2 galeria galeria galeria galeria . ."
-    ". . . galeria galeria galeria galeria . ."
+    ". desafio ."
+    ". inscripciones ."
+    ". info ."
+    ". recorrido ."
+    ". info2 ."
+    ". galeria ."
         
     ;
 
@@ -258,22 +246,29 @@
         grid-area: desafio;
         height: 100%;
         font-family: "tablet-gothic-condensed", "arial narrow", arial, verdana, sans-serif;
+        margin-top: 5px;
 
 
-        h1{
+        h1,
+        h2{
+            font-size: 260%;
+            margin-top: 50px;
+            text-align: center;
             font-weight: bold;
-            font-size: 100px;
             vertical-align: inherit;
             color: map-get(c.$colores-main,"desafio-h1");
-            margin-left: 20%;
-            margin-right: 20%;
-        
+            
+        }
+
+
+        h2{
+            margin-top: 0;
         }
         
         
         p{
+            margin: 90% 20px 30px 20px;
             width: auto;
-            margin: 70% 20px 30px 20px;
             font-size: calc(c.$fuente / 2);
             color: map-get(c.$colores-main,"desafio-h1");
             
@@ -282,14 +277,22 @@
 
 
     #eventos__inscripciones{
-        background-image: url(../img/inscripciones.png);
+        background-image: url(../img/inscripciones_movil.png);
+        height: 100%;
         display: inline-block;
         grid-area: inscripciones;
 
 
+        h2{
+            text-align: center;
+            margin-top: 27%;
+
+        }
+
+
         .eventos__inscripciones--div{
             text-align: center;
-            margin-top: 30%;
+            margin-top: 20%;
 
 
             p{
@@ -307,7 +310,8 @@
         
         h2{
             font-size: c.$fuente;
-        
+            margin-bottom: 90%;
+
         }
     }
 
@@ -315,30 +319,33 @@
     #eventos__informacion{
         grid-area: info;
         background-color: map-get(c.$colores-main,"informacion-fondo");
-
-
+        height: auto;
+        
         h2{
             text-align:center;
-            margin-top: 20%;
+            margin-top: 15%;
+            margin-left: 20px;
+            margin-right: 20px;
             
         }
 
 
         p{
-            margin: 60px;
-            margin-bottom: 20px;
+            margin: 40px 20px 40px 20px;
             
         }
 
-        a{
-            margin-top: 10px;
-            margin-left: 60px;
+        .a{
+            margin-left: 20px;
+            width: 30px;
 
         }
     }
     
     
     #eventos__recorrido{
+        height: 100%;
+        margin-bottom: 0;
         grid-area: recorrido;
         background-color: map-get(c.$colores-main,"recorrido-fondo");
 
@@ -353,10 +360,10 @@
     
         img{
             width: 95%;
-            height: 82%;
+            height: 75%;
             margin-top: 5%;
             margin-left: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 0;
 
         }
     }
@@ -366,6 +373,7 @@
         text-align: center;
         grid-area: info2;
         background-color:map-get(c.$colores-main,"informacion2-fondo");
+        margin-top: 0;
 
 
         h3{
@@ -384,12 +392,18 @@
             text-align:left;
     
         }
+
+        a{
+            margin-left: -60px;
+        }
     }
 
 
     #eventos__galeria{
         background-color: map-get(c.$colores-main,"informacion2-fondo");
         grid-area: galeria;
+        height: 90%;
+        margin-bottom: 10px;
 
 
         h2{
@@ -400,8 +414,8 @@
     
     
         img{
-            width: 32%;
-            height: 32%;
+            width: 45%;
+            height: 20%;
             margin-top: 10%;
             margin-left: 5px;
             grid-area: galeria;
@@ -410,61 +424,62 @@
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (min-width: 1024px){
     .eventos{
-        background-color: map-get(c.$colores-main,"fondo--mobile");
+        background: map-get(c.$colores-main,"eventos-fondo");
         display: grid;
-        grid-template-columns: 5% 90% 5%;
-        grid-template-rows: 550px  700px 700px  600px  600px  800px;
+        grid-template-columns: 2fr 1fr 7fr 4fr 3fr 2fr 6fr 1fr 2fr;
+        grid-template-rows: 15px 70px 790px 11fr 2fr 10fr 2fr;
         grid-template-areas: 
-        
-        ". desafio ."
-        ". inscripciones ."
-        ". info ."
-        ". recorrido ."
-        ". info2 ."
-        ". galeria ."
-        
+            
+        ". . . . . . . . ."
+        ". desafio desafio desafio desafio . . . ."
+        ". desafio desafio desafio desafio inscripciones inscripciones inscripciones ."
+        ". info info info recorrido recorrido recorrido . ."
+        ". . . galeria galeria galeria galeria . ."
+        ". . info2 galeria galeria galeria galeria . ."
+        ". . . galeria galeria galeria galeria . ."
+            
         ;
 
 
         #eventos__desafio{
-            margin-top: 5px;
+            margin-top: 0;
 
 
-            h1{
-                font-size: 260%;
-                margin-top: 50px;
-                margin-left: 20px;
+            h1,
+            h2{
+                font-size: 100px;
             
             }
             
             
             p{
-                margin: 50% 20px 30px 20px;
+                font-size: 20px;
+                margin: 60% 20px 30px 20px;
                 
             }
         }
 
 
         #eventos__inscripciones{
-            background-image: url(../img/inscripciones_movil.png);
+            background-image: url(../img/inscripciones.png);
             height: 100%;
 
 
-            .eventos__inscripciones--div{
-                margin-top: 20%;
-            
-            }
-            
-            
             h2{
-                font-size: c.$fuente;
-                margin-bottom: 90%;
+                text-align: center;
+                margin-top: 20%;
+
+            }
+
+
+            .eventos__inscripciones--div{
+                margin-top: -55%;
             
             }
             
-            
+
             p{
                 margin-top: 10%;
                 
@@ -474,45 +489,48 @@
 
         #eventos__informacion{
             h2{
-                margin-top: 15%;
+                margin-top: 20%;
             
             }
             
             
             p{
-                margin: 40px;
+                margin: 60px;
+                margin-bottom: 20px;
             
+            }
+
+            .a{
+                margin-left: 60px;
+                width: 30px;
+    
             }
         }
 
 
         #eventos__recorrido{
-            height: 100%;
-            margin-bottom: 0;
-
-
             img{
-                height: 75%;
+                height: 82%;
         
             }
         }
 
 
         #eventos__informacion2{
-            margin-top: 0;
+            a{
+                margin-left: -99px;
+            }
         
         }
 
 
         #eventos__galeria{
-            height: 90%;
+            height: 100%;
 
 
-            img{
-                width: 45%;
-                height: 20%;
-                margin-top: 10%;
-                margin-left: 5px;
+            img{ 
+                width: 32%;
+                height: 32%;
             }
         }
     }
@@ -520,109 +538,72 @@
 
 
 #noticias{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
     background-color: map-get(c.$colores-main,"noticias-fondo");
-    color: map-get(c.$colores-main, "color" );
     font-family: 'Quicksand', sans-serif;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;
-    grid-template-areas: 
 
-    "noticia1 noticia2 noticia3"
-    "noticia4 noticia5 noticia6"
-    ;
+
+    .titulo{
+        font-size: 15px;
+    }
+
+
+    p,
+    a{
+        font-size: 12px;
+    
+    }
 
 
     .noticia__div1{
-        grid-area: noticia1;
         margin: 40px 30px 50px 80px;
-        padding: 20px;
-        width: 80%;
-        display: block;
-        position: relative;
+        
 
     }
 
 
     .noticia__div2{
-        grid-area: noticia2;
         margin: 40px 40px 50px 30px;
-        width: 80%;
-        padding: 20px;
-        display: block;
-        position: relative;
     
     }
 
 
     .noticia__div3{
-        grid-area: noticia3;
         margin: 40px 80px 50px 10px;
-        width: 80%;
-        padding: 20px;
-        display: block;
-        position: relative;
     
     }
 
 
-    .noticia__div4{
-        grid-area: noticia4;
-        margin: 40px;
-        margin-bottom: 50px;
-        padding: 20px;
-        width: 80%;
-        display: block;
-        position: relative;
-    
-    }
-    
-
-    .noticia__div5{
-        grid-area: noticia5;
-        margin: 40px;
-        margin-bottom: 50px;
-        padding: 20px;
-        width: 80%;
-    
-        display: block;
-        position: relative;
-    
-    }
-    
-
+    .noticia__div4,
+    .noticia__div5,
     .noticia__div6{
-        grid-area: noticia6;
         margin: 40px;
         margin-bottom: 50px;
+    
+    }
+    
+
+    .noticia__div1,
+    .noticia__div2,
+    .noticia__div3,
+    .noticia__div4,
+    .noticia__div5,
+    .noticia__div6{
+        margin-left: 10px;
+        margin-right: 10px;
+        background-color:map-get(c.$colores-main,"fondo--mobile");
+        color: c.$color;
+        border-radius: 10px;
         padding: 20px;
         width: 80%;
-    
         display: block;
         position: relative;
-    
-    }
 
-
-    .noticia__div1:hover,
-    .noticia__div2:hover,
-    .noticia__div3:hover,
-    .noticia__div4:hover,
-    .noticia__div5:hover,
-    .noticia__div6:hover{
-        background-color: map-get(c.$colores-main,"fondo--mobile");
-        color: c.$color;
-        border-radius:10px;
-        transform: scale(1);
-        transition: 0.3s;
-
-    }
-
-
-    p{
-        margin-top: 20px;
-        margin-bottom: 25px;
-    
     }
 
 
@@ -630,60 +611,82 @@
         width: 90%;
 
     }
-
-
-    //MIXINS
-    @mixin noticia-medio ($color-mixin: #00ebc7){
-       background-color: $color-mixin;
-
-    }
-
-
-    .noticia__div2:hover,
-    .noticia__div5:hover{
-        @include noticia-medio($color-mixin: map-get(c.$colores-main,"informacion2-fondo"));
-
-    }
 }
 
 
-@media screen and (max-width: 480px){
+//MIXINS
+@mixin noticia-medio ($color-mixin: #00ebc7){
+    background-color: $color-mixin;
+ 
+}
+
+
+@media screen and (min-width: 1024px){
     #noticias {
         display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-
-
-        p{
-            font-size: calc(c.$fuente / 2);
+        align-content: space-evenly;
         
-        }
-
-
-        .noticia__div3{
-            margin-left: 20%;
-            background-color:map-get(c.$colores-main,"fondo--mobile");
-            color: c.$color;
-            border-radius: 10px;
     
-        }
-
-
         .noticia__div1,
         .noticia__div2,
+        .noticia__div3,
         .noticia__div4,
         .noticia__div5,
         .noticia__div6{
-        margin-left: 10px;
-        margin-right: 10px;
-        background-color:map-get(c.$colores-main,"fondo--mobile");
-        color: c.$color;
-        border-radius: 10px;
+            background-color: map-get(c.$colores-main,"noticias-fondo");
+            color: map-get(c.$colores-main, "color" );
+            width: 28%;
+            height: 960px;
+            margin-top: 30px;
+
+
+        }
+
+    
+        .noticia__div1:hover,
+        .noticia__div2:hover,
+        .noticia__div3:hover,
+        .noticia__div4:hover,
+        .noticia__div5:hover,
+        .noticia__div6:hover{
+            background-color: map-get(c.$colores-main , "fondo--mobile" );
+            color: c.$color;
+            border-radius:10px;
+            transform: scale(1);
+            transition: 0.3s;
+    
+        }
+    
+
+        .titulo{
+            font-size: 30px;
 
         }
     
+
+        p{
+            font-size: calc(c.$fuente/2);
+            margin-top: 20px;
+            margin-bottom: 25px;
+        
+        }
+    
+    
+        .a{
+            font-size: calc(c.$fuente/2);
+
+        }
+        
+    
+        .noticia__div2:hover,
+        .noticia__div5:hover{
+            @include noticia-medio($color-mixin: map-get(c.$colores-main,"informacion2-fondo"));
+
+        }
     }
 }
 
@@ -691,6 +694,7 @@
 #sobrenosotros{
     background-color: c.$color;
     color: map-get(c.$colores-main,"desafio-h1");
+    height: auto;
 
 
     h1{
@@ -701,17 +705,13 @@
 
 
     .sobrenosotros--info{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: stretch;
+        margin-top: 10%;
+        margin-left: 20px;
+        width: 100%
 
 
         h2{
             margin-top: 80px;
-            margin-left: 50px;
         
         }
 
@@ -725,53 +725,112 @@
 
         p{
             margin-top: 35px;
-            margin-left: 50px;
-            width: 55%;
+            width: 95%;
         
         }
 
 
         img{
-            width: 200%;
-            height: 200%;
-            margin-left: -300px;
-            margin-top: 130px;
+            width: 95%;
+            margin-left: 0;
+            margin-top: 10px;
+            margin-bottom: 10px;
 
         }
     }
 }
 
 
-@media screen and (max-width: 480px){
+@media screen and (min-width: 1024px){
     #sobrenosotros{
-        height: auto;
+        h1{
+            font-size: 55px;
 
+        }
+        
 
         .sobrenosotros--info{
-            margin-top: 35%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: stretch;
 
 
             h2{
-                margin-top: -200px;
-                margin-left: 30px;
+                margin-top: -10%;
+                margin-left: 0;
             
             }
         
         
             p{
-                margin-left: 30px;
-                margin-bottom: 40%;
-                width: 110%;
+                margin-left: 0;
+                width: 95%;
+                font-size: 20px;
             
             }
         
         
             img{
-                width: 370%;
-                margin-left: -290px;
-                margin-top: 600%;
-                margin-bottom: 10px;
+                width: 100%;
+                height: 200%;
+                margin-left: -20px;
+                margin-top: 44px;
+
             }
         }
     }
+}
+
+
+
+
+
+
+/* -----------FOOTER--------- */
+
+#footer{
+    font-size: calc(c.$fuente/2);
+    margin-top: 0;
+
+
+    font{
+        margin-left: -20px;
+    }
+
+
+    img{
+        width: 25px;
+        height: 25px;
+        margin-top: -23px;
+    }
+
+    .fb{
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    #footer{
+        font-size: 20px;
+    
+    
+        img{
+            width: 30px;
+            height: 30px;
+            margin-top: -11px;
+        }
+    
+        .fb{
+            width: 25px;
+            height: 25px;
+        }
+    
+    }
+    
 }
