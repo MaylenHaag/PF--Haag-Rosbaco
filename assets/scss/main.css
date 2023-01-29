@@ -14,14 +14,13 @@
   left: 0;
   margin: 0;
   padding-left: 5px;
-  padding-right: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-end;
   align-content: center;
-  width: auto;
+  width: 100%;
   z-index: 2;
 }
 .header #logo {
@@ -38,9 +37,7 @@
 .header #logo img {
   width: 40px;
   height: auto;
-  margin-top: 5%;
   margin-left: 10px;
-  position: initial;
 }
 .header .header__nav {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -58,8 +55,8 @@
   display: inline-block;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin-left: 150%;
-  margin-top: 10%;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 .header li {
   display: inline-block;
@@ -98,7 +95,7 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  min-width: 140px;
   box-shadow: 0px 8px 16px 0px;
   z-index: 1;
 }
@@ -113,7 +110,7 @@
   background-color: #f1f1f1;
   color: #CC0000;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header #logo {
     align-items: center;
     align-content: center;
@@ -123,20 +120,20 @@
     position: relative;
     width: 60px;
     margin-left: 0;
+    margin-top: 5px;
   }
   .header .header__nav {
     font-size: 15px;
-    padding-right: 10%;
-    margin-right: 0;
   }
   .header .header__ul {
     display: flex;
+    margin-bottom: 40px;
   }
 }
 
 /* ----------MAIN---------- */
 main {
-  margin-top: 30%;
+  margin-top: 22%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -294,7 +291,6 @@ main {
   height: 20%;
   margin-top: 10%;
   margin-left: 5px;
-  grid-area: galeria;
 }
 
 @media screen and (min-width: 1024px) {
@@ -549,6 +545,7 @@ main {
 }
 #footer font {
   margin-left: -20px;
+  vertical-align: inherit;
 }
 #footer img {
   width: 25px;
@@ -573,22 +570,4 @@ main {
     width: 25px;
     height: 25px;
   }
-}
-/* ---FOOTER--- */
-font {
-  vertical-align: inherit;
-}
-
-.img__footer {
-  align-items: center;
-}
-
-.img__footer--inst {
-  width: 34px;
-  height: 34px;
-}
-
-.img__footer--fb {
-  width: 27px;
-  height: 27px;
 }/*# sourceMappingURL=main.css.map */

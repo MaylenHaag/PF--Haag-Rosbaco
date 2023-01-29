@@ -1,22 +1,52 @@
-/* ---FOOTER--- */
+@use 'commons' as c;
 
-font{
-    vertical-align: inherit;
+/* -----------FOOTER--------- */
+
+#footer{
+    font-size: calc(c.$fuente/2);
+    margin-top: 0;
+
+
+    font{
+        margin-left: -20px;
+        vertical-align: inherit;
+
+    }
+
+
+    img{
+        width: 25px;
+        height: 25px;
+        margin-top: -23px;
+
+    }
+
+
+    .fb{
+        width: 20px;
+        height: 20px;
+    
+    }
 }
 
 
-.img__footer{
-    align-items: center;
-}
+@media screen and (min-width: 1024px) {
+    #footer{
+        font-size: 20px;
+    
+    
+        img{
+            width: 30px;
+            height: 30px;
+            margin-top: -11px;
+     
+        }
+    
 
-
-.img__footer--inst{
-    width:34px;
-    height:34px;
-}
-
-
-.img__footer--fb{
-    width:27px;
-    height:27px;
+        .fb{
+            width: 25px;
+            height: 25px;
+        
+        }
+    }
 }
