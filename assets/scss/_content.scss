@@ -25,16 +25,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     align-content: center;
     width: auto;
     z-index: 2;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
 
 
     #logo{
@@ -81,9 +75,8 @@
         display: inline-block;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
+        margin-left: 150%;
+        margin-top: 10%;
 
     }
 
@@ -92,8 +85,6 @@
         display: inline-block;
         padding-left: 15px;
         padding-right: 0;
-        align-items: center;
-        align-content: center;
     
     }
 
@@ -168,7 +159,7 @@
     }
 
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 768px){
         #logo {
             align-items: center;
             align-content: center;
@@ -184,11 +175,14 @@
 
         .header__nav{
             font-size: calc(c.$fuente/2);
+            padding-right: 10%;
+            margin-right: 0;
     
         }
 
         .header__ul{
             display: flex;
+
         }    
     }
 }
@@ -715,8 +709,9 @@ main{
 
 #tabla{
     font-size: 10px;
-    width: 90%;
+    width: 99%;
     margin: 5%;
+    margin-left: 5px;
 
 
     .columnas{
@@ -731,6 +726,7 @@ main{
     #tabla{
         font-size: 15px;
         margin: 1%;
+        margin-left: 5px;
         text-align: center;
 
 
